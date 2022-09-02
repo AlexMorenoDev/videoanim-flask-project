@@ -188,29 +188,29 @@ pybabel compile -d translations
 ## Screenshots
 
 ### Index:
-![Index](https://github.com/AlexMoreno98/videoanim-flask-project/blob/master/images/index.PNG)
+![Index](https://github.com/AlexMorenoDev/videoanim-flask-project/blob/master/images/index.PNG)
 <br/><br/>
 
 ### List of products:
-![List of products](https://github.com/AlexMoreno98/videoanim-flask-project/blob/master/images/listProduct.PNG)
+![List of products](https://github.com/AlexMorenoDev/videoanim-flask-project/blob/master/images/listProduct.PNG)
 <br/><br/>
 
 ### Show product information:
-![Show product](https://github.com/AlexMoreno98/videoanim-flask-project/blob/master/images/showProduct.PNG)
+![Show product](https://github.com/AlexMorenoDev/videoanim-flask-project/blob/master/images/showProduct.PNG)
 <br/><br/>
 
 ### User profile:
-![Profile](https://github.com/AlexMoreno98/videoanim-flask-project/blob/master/images/profile.PNG)
+![Profile](https://github.com/AlexMorenoDev/videoanim-flask-project/blob/master/images/profile.PNG)
 <br/><br/>
 
 ### Add new products:
-![Add products](https://github.com/AlexMoreno98/videoanim-flask-project/blob/master/images/addProducts.PNG)
+![Add products](https://github.com/AlexMorenoDev/videoanim-flask-project/blob/main/images/addProducts.PNG)
 <br/><br/>
 
 ### Modify shop information:
-![Modify shop](https://github.com/AlexMoreno98/videoanim-flask-project/blob/master/images/modifyShop.PNG)
+![Modify shop](https://github.com/AlexMorenoDev/videoanim-flask-project/blob/master/images/modifyShop.PNG)
 <br/><br/>
 
 ### Modify product information:
-![Modify product](https://github.com/AlexMoreno98/videoanim-flask-project/blob/master/images/modifyProduct.PNG)
+![Modify product](https://github.com/AlexMorenoDev/videoanim-flask-project/blob/master/images/modifyProduct.PNG)
 <br/><br/>
