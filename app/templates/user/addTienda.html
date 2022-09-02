@@ -1,0 +1,58 @@
+{% extends "/layouts/baseLogged.html" %}
+
+{% block content %}
+    <div class="container">           
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <p>
+                    <form action="{{ url_for('addTienda', nombre_usuario=nombreUsuario) }}" enctype="multipart/form-data" method="POST">
+                        <div class="form-group">
+                            <label for="exampleInputNombre1">{{ _('Nombre') }}</label>
+                            <input type="text" name="nombre" class="form-control" maxlength = "20" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputDireccion1">{{ _('Dirección') }}</label>
+                            <input type="text" name="direccion" class="form-control" maxlength = "50" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputTelefono1">{{ _('Teléfono') }}</label>
+                            <input type="tel" name="telefono" pattern="[0-9]{9}" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputImagen1">{{ _('Imagen') }}</label>
+                            <input type="file" name="imagen_tienda" accept="image/*" class="form-control-file" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">{{ _('Añadir') }}</button>
+                    </form>
+                </p>   
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{ _('Información') }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {% if error is defined %}
+                            {{ error }}
+                        {% else %} 
+                            {{ msg }}                               
+                        {% endif %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _('Aceptar') }}</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm"></div>
+        </div>
+    </div>
+
+{% endblock %}

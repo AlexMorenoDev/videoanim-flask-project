@@ -1,0 +1,319 @@
+# Basque (Spain) translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-01-12 23:25+0100\n"
+"PO-Revision-Date: 2020-01-12 23:25+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: eu_ES\n"
+"Language-Team: eu_ES <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: app.py:52
+msgid "¡Ya existe una cuenta con ese email!"
+msgstr "Erabiltzaile bat posta elektroniko horrekin dago jada!"
+
+#: app.py:55
+msgid "¡Las contraseñas introducidas son distintas!"
+msgstr "Sartutako pasahitzak desberdinak dira!"
+
+#: app.py:59 app.py:63
+msgid "¡Te has registrado correctamente!"
+msgstr "Ondo erregistratu zara!"
+
+#: app.py:76
+msgid "¡Has iniciado sesión correctamente!"
+msgstr "Saioa arrakastaz hasi duzu!"
+
+#: app.py:78
+msgid "¡Email y/o contraseña incorrectos, inténtalo de nuevo!"
+msgstr "Posta elektronikoa eta/edo pasahitza okerrak, proba ezazu berriro!"
+
+#: app.py:80
+msgid "¡Introduce un email y contraseña válidos!"
+msgstr "Sar ezazu posta elektroniko eta pasahitz balidunak"
+
+#: app.py:133
+msgid "Ya existe un usuario con ese email, prueba de nuevo."
+msgstr "Erabiltzaile bat posta elektroniko horrekin dago jada, proba ezazu berriro."
+
+#: app.py:145
+msgid "La nueva password no puede ser igual que la actual. Prueba con otra."
+msgstr "Pasahitz berria ezin da oraingoaren berdina izan. Saiatu beste pasahitz batekin."
+
+#: app.py:165
+msgid "¡Tus datos se han guardado correctamente!"
+msgstr "Zure datu pertsonalak behar bezala gorde dira!"
+
+#: app.py:167
+msgid "La contraseña introducida no es correcta, inténtalo de nuevo"
+msgstr "Idatzi duzun pasahitza ez da zuzena, saiatu berriro"
+
+#: app.py:169
+msgid "Tienes que introducir tu contraseña actual para poder actualizar tus datos"
+msgstr "Zure pasahitza sartu behar duzu zure datuak eguneratzeko"
+
+#: app.py:187
+msgid "¡Esa tienda ya existe!"
+msgstr "Denda hori erregistratuta dago jada!"
+
+#: app.py:203 app.py:218 app.py:262 app.py:324 app.py:391
+msgid "¡El archivo introducido tiene que tener un formato jpg, jpeg o png!"
+msgstr "Sartutako artxiboak jpg, jpeg edo png formatua izan behar du!"
+
+#: app.py:220
+msgid "¡Tienda guardada correctamente!"
+msgstr "Denda ondo gorde da!"
+
+#: app.py:289
+msgid "¡Tienda actualizada correctamente!"
+msgstr "Denda ondo eguneratu da!"
+
+#: app.py:307
+msgid "¡Ese producto ya existe!"
+msgstr "Produktu hori erregistratuta dago jada!"
+
+#: app.py:327
+msgid "¡Producto guardado correctamente!"
+msgstr "Produktua ondo gorde da!"
+
+#: app.py:421
+msgid "¡Producto actualizado correctamente!"
+msgstr "Produktua ondo eguneratu data!"
+
+#: templates/layouts/base.html:30 templates/layouts/baseLogged.html:29
+msgid "Idioma"
+msgstr "Hizkuntza"
+
+#: templates/layouts/base.html:33 templates/layouts/baseLogged.html:32
+msgid "Español"
+msgstr "Gaztelania"
+
+#: templates/layouts/base.html:34 templates/layouts/baseLogged.html:33
+msgid "Euskera"
+msgstr "Euskera"
+
+#: templates/layouts/base.html:35 templates/layouts/baseLogged.html:34
+msgid "Inglés"
+msgstr "Ingelesa"
+
+#: templates/layouts/base.html:44
+msgid "Registro"
+msgstr "Erregistro"
+
+#: templates/layouts/base.html:45 templates/user/login.html:19
+msgid "Iniciar sesión"
+msgstr "Saioa hasi"
+
+#: templates/layouts/base.html:48 templates/layouts/base.html:50
+#: templates/layouts/baseLogged.html:41 templates/layouts/baseLogged.html:43
+#: templates/layouts/baseLogged.html:45 templates/layouts/baseLogged.html:48
+#: templates/layouts/baseLogged.html:50
+msgid "Volver"
+msgstr "Itzuli"
+
+#: templates/layouts/baseLogged.html:39
+msgid "Añadir tienda"
+msgstr "Denda gehitu"
+
+#: templates/layouts/baseLogged.html:46
+msgid "Añadir productos"
+msgstr "Produktuak gehitu"
+
+#: templates/layouts/baseLogged.html:66 templates/layouts/baseLogged.html:68
+#: templates/user/profile.html:5
+msgid "Mi perfil"
+msgstr "Nire profila"
+
+#: templates/layouts/baseLogged.html:71
+msgid "Cerrar sesión"
+msgstr "Saioa amaitu"
+
+#: templates/user/addProducts.html:11 templates/user/addTienda.html:11
+#: templates/user/register.html:15 templates/visitor/listProducts.html:33
+#: templates/visitor/showProduct.html:33
+msgid "Nombre"
+msgstr "Izena"
+
+#: templates/user/addProducts.html:15 templates/visitor/showProduct.html:37
+msgid "Precio"
+msgstr "Prezioa"
+
+#: templates/user/addProducts.html:19
+msgid "Ancho"
+msgstr "Zabalera"
+
+#: templates/user/addProducts.html:21
+msgid "Alto"
+msgstr "Altuera"
+
+#: templates/user/addProducts.html:25 templates/visitor/showProduct.html:45
+msgid "Materiales"
+msgstr "Materialak"
+
+#: templates/user/addProducts.html:29 templates/user/addTienda.html:23
+#: templates/user/modifyProduct.html:54 templates/user/modifyTienda.html:46
+msgid "Imagen"
+msgstr "Irudia"
+
+#: templates/user/addProducts.html:32 templates/user/addTienda.html:26
+msgid "Añadir"
+msgstr "Gehitu"
+
+#: templates/user/addProducts.html:41 templates/user/addTienda.html:35
+#: templates/user/login.html:27 templates/user/modifyProduct.html:68
+#: templates/user/modifyTienda.html:86 templates/user/profile.html:36
+#: templates/user/register.html:34 templates/user/userTemplate.html:36
+msgid "Información"
+msgstr "Informazioa"
+
+#: templates/user/addProducts.html:54 templates/user/addTienda.html:48
+#: templates/user/login.html:36 templates/user/modifyProduct.html:81
+#: templates/user/modifyTienda.html:99 templates/user/profile.html:50
+#: templates/user/register.html:47 templates/user/userTemplate.html:45
+msgid "Aceptar"
+msgstr "Onartu"
+
+#: templates/user/addTienda.html:15 templates/visitor/listProducts.html:37
+msgid "Dirección"
+msgstr "Helbidea"
+
+#: templates/user/addTienda.html:19 templates/visitor/listProducts.html:41
+msgid "Teléfono"
+msgstr "Telefonoa"
+
+#: templates/user/login.html:13 templates/user/register.html:12
+msgid "Introduce tu email"
+msgstr "Sar ezazu zure posta electronikoa"
+
+#: templates/user/login.html:16 templates/user/register.html:19
+msgid "Contraseña"
+msgstr "Pasahitza"
+
+#: templates/user/login.html:17 templates/user/register.html:20
+msgid "Introduce tu contraseña"
+msgstr "Sar ezazu zure pasahitza"
+
+#: templates/user/modifyProduct.html:5 templates/visitor/showProduct.html:5
+msgid "Información del producto"
+msgstr "Produktuaren informazioa"
+
+#: templates/user/modifyProduct.html:35 templates/user/modifyTienda.html:35
+msgid "Introduce el nombre nuevo"
+msgstr "Sar ezazu izen berria"
+
+#: templates/user/modifyProduct.html:39
+msgid "Introduce el precio nuevo"
+msgstr "Sar ezazu prezio berria"
+
+#: templates/user/modifyProduct.html:43
+msgid "Introduce el nuevo ancho"
+msgstr "Sar ezazu zabalera berria"
+
+#: templates/user/modifyProduct.html:47
+msgid "Introduce el nuevo alto"
+msgstr "Sar ezazu altuera berria"
+
+#: templates/user/modifyProduct.html:51
+msgid "Introduce nuevos materiales"
+msgstr "Sar ezazu material berriak"
+
+#: templates/user/modifyProduct.html:57 templates/user/modifyTienda.html:49
+#: templates/user/modifyTienda.html:69 templates/user/profile.html:25
+#: templates/user/userTemplate.html:18
+msgid "Modificar"
+msgstr "Aldatu"
+
+#: templates/user/modifyTienda.html:5 templates/visitor/listProducts.html:5
+msgid "Información de la tienda"
+msgstr "Dendaren informazioa"
+
+#: templates/user/modifyTienda.html:39
+msgid "Introduce la dirección nueva"
+msgstr "Sar ezazu helbide berria"
+
+#: templates/user/modifyTienda.html:43
+msgid "Introduce el teléfono nuevo"
+msgstr "Sar ezazu telefono berria"
+
+#: templates/user/modifyTienda.html:57 templates/visitor/listProducts.html:52
+msgid "Productos disponibles"
+msgstr "Eskuragarri dauden produktuak"
+
+#: templates/user/modifyTienda.html:68 templates/visitor/showProduct.html:41
+msgid "Tamaño"
+msgstr "Tamaina"
+
+#: templates/user/modifyTienda.html:70 templates/user/userTemplate.html:19
+msgid "Eliminar"
+msgstr "Eliminatu"
+
+#: templates/user/modifyTienda.html:79
+msgid "¡No hay productos registrados!"
+msgstr "Ez dago produkturik!"
+
+#: templates/user/profile.html:13
+msgid "Introduce el nuevo nombre"
+msgstr "Sar ezazu izen berria"
+
+#: templates/user/profile.html:17
+msgid "Introduce el nuevo email"
+msgstr "Sar ezazu posta elektroniko berria"
+
+#: templates/user/profile.html:20
+msgid "Introduce la nueva contraseña"
+msgstr "Sar ezazu pasahitz berria"
+
+#: templates/user/profile.html:23
+msgid "Introduce tu contraseña actual"
+msgstr "Sar ezazu zure pasahitza"
+
+#: templates/user/register.html:16
+msgid "Introduce tu nombre"
+msgstr "Sar ezazu zure izena"
+
+#: templates/user/register.html:23
+msgid "Repite la contraseña"
+msgstr "Pasahitza errepikatu"
+
+#: templates/user/register.html:24
+msgid "Repite tu contraseña"
+msgstr "Pasahitza errepikatu"
+
+#: templates/user/register.html:26
+msgid "Registrarse"
+msgstr "Erregistratu"
+
+#: templates/user/userTemplate.html:5
+msgid "Mi listado de tiendas"
+msgstr "Nire denda zerrenda"
+
+#: templates/user/userTemplate.html:28
+msgid "¡No hay tiendas registradas!"
+msgstr "Ez dago dendarik!"
+
+#: templates/visitor/index.html:16
+msgid "Visitar"
+msgstr "Visitatu"
+
+#: templates/visitor/listProducts.html:45
+msgid "Contacto"
+msgstr "Kontaktua"
+
+#: templates/visitor/listProducts.html:65
+msgid "Examinar"
+msgstr "Ikusi"
+
+#: templates/visitor/listProducts.html:74
+msgid "¡No hay productos disponibles!"
+msgstr "Ez dago produkturik eskuragarri!"
+

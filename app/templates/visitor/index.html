@@ -1,0 +1,30 @@
+{% extends "/layouts/base.html" %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            {% for tienda in tiendas %}
+                <div class="col-sm-3">
+                    <div class="container">
+                        <p>
+                            <div class="card" style="width: 18rem;">
+                                <img src="{{ url_for('file', filename=tienda.nombre_imagen_tienda) }}" class="card-img-top" alt="Imagen no disponible">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>{{ tienda.nombre }}</b></h5>
+                                    {% if tienda.direccion|length > 34 %}
+                                    <p class="card-text">{{ tienda.direccion }}</p>
+                                    {% else %}
+                                    <p class="card-text">{{ tienda.direccion }}</p>
+                                    <div class="gap-23"></div>
+                                    {% endif %}
+                                    <p class="card-text">Tlf: {{ tienda.telefono }}</p>
+                                    <a href="{{ url_for('listProducts', nombre_tienda=tienda.nombre) }}" class="btn btn-primary">{{ _('Visitar') }}</a>
+                                </div>
+                            </div>                                           
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

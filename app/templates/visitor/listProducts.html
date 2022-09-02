@@ -1,0 +1,81 @@
+{% extends "/layouts/base.html" %}
+
+{% block content %}
+    <div class="container">
+        </br><h1>{{ _('Información de la tienda') }}</h1>
+        <div class="row">
+            <div class="col-sm my-auto">
+                <div class="container">
+                    <div class="modal fade bd-example-modal-lg show" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" id="dynamic-content">
+                                        <img src="{{ url_for('file', filename=tienda.nombre_imagen_tienda) }}" class="zoom" alt="Imagen no disponible">
+                                    </div>
+                                </div>
+                           </div>
+                    </div> 
+                    
+                    <a href="#myModal" role="button" data-toggle="modal">
+                        <img src="{{ url_for('file', filename=tienda.nombre_imagen_tienda) }}" class="zoom" alt="Imagen no disponible" >
+                    </a>
+
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="container">
+                    <p>
+                        <div class="form-group">
+                            <label>{{ _('Nombre') }}:</label><br/>
+                            <label class="form-control">{{ tienda.nombre }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label>{{ _('Dirección') }}:</label><br/>
+                            <label class="form-control">{{ tienda.direccion }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label>{{ _('Teléfono') }}:</label><br/>
+                            <label class="form-control">{{ tienda.telefono }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label>{{ _('Contacto') }}:</label><br/>
+                            <label class="form-control">{{ tienda.usuario_email }}</label>
+                        </div>
+                    </p>   
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            {% if productos|length > 0  %}
+                <h3>{{ _('Productos disponibles') }}</h3>
+                <div class="row">
+                    {% for producto in productos %}
+                    <div class="col-lg-4 d-flex align-items-stretch">
+                        <div class="container">
+                            <p>
+                                <div class="card" style="width: 18rem;">
+                                    <img src="{{ url_for('file', filename=producto.nombre_imagen_producto) }}" class="card-img-top" alt="Imagen no disponible">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><b>{{ producto.nombre }}</b></h5>
+                                        <p class="card-text">Tamaño: {{ producto.tam_ancho }} x {{ producto.tam_alto }} cm</p>
+                                        <p class="card-text">{{ producto.precio }} €</p>
+                                        <a href="{{ url_for('showProduct', nombre_tienda=tienda.nombre, nombre_producto=producto.nombre) }}" class="btn btn-primary">{{ _('Examinar') }}</a> 
+                                    </div>
+                                </div>                                           
+                            </p>
+                        </div>
+                    </div>            
+                    {% endfor %}
+                </div>
+            {% else  %}
+                <p><h3>{{ _('¡No hay productos disponibles!') }}</h3></p>
+            {% endif  %}
+        </div>
+    </div>
+
+{% endblock %}

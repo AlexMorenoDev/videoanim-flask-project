@@ -1,0 +1,61 @@
+{% extends "/layouts/baseLogged.html" %}
+
+{% block content %}
+    <div class="container">
+        </br><h1>{{ _('Mi perfil') }}</h1>
+        <div class="row">
+            <div class="col-sm">
+                <div class="container">
+                    <p>
+                        <form action="{{ url_for('profile', nombre_usuario=usuario.name) }}" enctype="multipart/form-data" method="POST">
+                            <div class="form-group">
+                                <label>{{ usuario.name }}</label>
+                                <input type="text" name="nombre_a" class="form-control" placeholder="{{ _('Introduce el nuevo nombre') }}">
+                            </div>
+                            <div class="form-group">
+                                <label>{{ usuario.email }}</label>
+                                <input type="text" name="email_a" class="form-control" placeholder="{{ _('Introduce el nuevo email') }}">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id=passw2 name="password_a" class="form-control" placeholder="{{ _('Introduce la nueva contraseña') }}">
+                                <span toggle="#passw2" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id=passw1 name="oldPassword" class="form-control" placeholder="{{ _('Introduce tu contraseña actual') }}">
+                                <span toggle="#passw1" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">{{ _('Modificar') }}</button>
+                        </form>
+                    </p>   
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{ _('Información') }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% if error is defined %}
+                        {{ error }}
+                    {% endif %} 
+                    {% if msg is defined %}
+                        {{ msg }}                               
+                    {% endif %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _('Aceptar') }}</button>
+                </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+
+{% endblock %}

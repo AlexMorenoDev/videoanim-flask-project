@@ -1,0 +1,55 @@
+{% extends "/layouts/base.html" %}
+
+{% block content %}
+    <div class="container">
+        </br><h1>{{ _('Información del producto') }}</h1>
+        <div class="row">
+            <div class="col-sm my-auto">
+                <div class="container">
+                    <div class="modal fade bd-example-modal-lg show" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" id="dynamic-content">
+                                        <img src="{{ url_for('file', filename=producto.nombre_imagen_producto) }}" class="zoom" alt="Imagen no disponible">
+                                    </div>
+                                </div>
+                           </div>
+                    </div> 
+                    
+                    <a href="#myModal" role="button" data-toggle="modal">
+                        <img src="{{ url_for('file', filename=producto.nombre_imagen_producto) }}" class="zoom" alt="Imagen no disponible" >
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="container">
+                    <p>
+                        <div class="form-group">
+                            <label>{{ _('Nombre') }}:</label>
+                            <label class="form-control">{{ producto.nombre }}</label>
+                        </div>
+                        <div class="form-group">
+                            <label>{{ _('Precio') }}:</label>
+                            <label class="form-control">{{ producto.precio }} €</label>
+                        </div>
+                        <div class="form-group">
+                            <label>{{ _('Tamaño') }}:</label>
+                            <label class="form-control">{{ producto.tam_ancho }} x {{ producto.tam_alto }} cm</label>
+                        </div>
+                        <div class="form-group">
+                            <label>{{ _('Materiales') }}:</label>
+                            <label class="form-control">{{ producto.materiales }}</label>
+                        </div>
+                    </p>   
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

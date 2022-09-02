@@ -1,0 +1,89 @@
+{% extends "/layouts/baseLogged.html" %}
+
+{% block content %}
+    <div class="container">
+        </br><h1>{{ _('Información del producto') }}</h1>
+        <div class="row">
+            <div class="col-sm my-auto">
+                <div class="container">
+                    <div class="modal fade bd-example-modal-lg show" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" id="dynamic-content">
+                                        <img src="{{ url_for('file', filename=producto.nombre_imagen_producto) }}" class="zoom" alt="Imagen no disponible">
+                                    </div>
+                                </div>
+                           </div>
+                    </div> 
+                    
+                    <a href="#myModal" role="button" data-toggle="modal">
+                        <img src="{{ url_for('file', filename=producto.nombre_imagen_producto) }}" class="zoom" alt="Imagen no disponible" >
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="container">
+                    <p>
+                        <form action="{{ url_for('modifyProduct', nombre_usuario=usuario.name, nombre_tienda=tienda.nombre, nombre_producto=producto.nombre) }}" enctype="multipart/form-data" method="POST">
+                            <div class="form-group">
+                                <label>{{ producto.nombre }}</label>
+                                <input type="text" name="nombre_a" class="form-control" placeholder="{{ _('Introduce el nombre nuevo') }}" maxlength = "20">
+                            </div>
+                            <div class="form-group">
+                                <label>{{ producto.precio }} €</label>
+                                <input type="number" name="precio_a" class="form-control" step="any" min="0" placeholder="{{ _('Introduce el precio nuevo') }}">
+                            </div>
+                            <div class="form-group">
+                                <label>{{ producto.tam_ancho }} cm</label>
+                                <input type="number" name="ancho_a" class="form-control" step="any" min="0" placeholder="{{ _('Introduce el nuevo ancho') }}">
+                            </div>
+                            <div class="form-group">
+                                <label>{{ producto.tam_alto }} cm</label>
+                                <input type="number" name="alto_a" class="form-control" step="any" min="0" placeholder="{{ _('Introduce el nuevo alto') }}">
+                            </div>
+                            <div class="form-group">
+                                <label>{{ producto.materiales }}</label>
+                                <input type="text" name="materiales_a" class="form-control" placeholder="{{ _('Introduce nuevos materiales') }}" maxlength = "70">
+                            </div>
+                            <div class="form-group">
+                                <label>{{ _('Imagen') }}</label><br/>
+                                <input type="file" name="imagen_a" accept="image/*" class="form-control-file">
+                            </div>
+                            <button type="submit" class="btn btn-primary">{{ _('Modificar') }}</button>
+                        </form>
+                    </p>   
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{ _('Información') }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% if error is defined %}
+                        {{ error }}
+                    {% else %} 
+                        {{ msg }}                               
+                    {% endif %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _('Aceptar') }}</button>
+                </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+
+{% endblock %}

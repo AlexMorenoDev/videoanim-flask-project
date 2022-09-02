@@ -1,0 +1,58 @@
+{% extends "/layouts/baseLogged.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ _('Mi listado de tiendas') }}:</h1>
+        <div class="row">
+            {% if tiendas.count() > 0 %}
+                {% for tienda in tiendas %}
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="container">
+                        <p>
+                            <div class="card" style="width: 18rem;">
+                                <img src="{{ url_for('file', filename=tienda.nombre_imagen_tienda) }}" class="card-img-top" alt="Imagen no disponible">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>{{ tienda.nombre }}</b></h5>
+                                    {% if tienda.direccion|length > 34 %}
+                                    <p class="card-text">{{ tienda.direccion }}</p>
+                                    {% else %}
+                                    <p class="card-text">{{ tienda.direccion }}</p>
+                                    <div class="gap-23"></div>
+                                    {% endif %}
+                                    <p class="card-text">{{ tienda.telefono }}</p>
+                                    <a href="{{ url_for('modifyTienda', nombre_tienda=tienda.nombre, nombre_usuario=usuario.name) }}" class="btn btn-primary">{{ _('Modificar') }}</a>
+                                    <a type="button" class="btn btn-primary" href="{{ url_for('removeTienda', nombre_tienda=tienda.nombre) }}">{{ _('Eliminar') }}</a>
+                                </div>
+                            </div>                                           
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="container">
+                    <p><h3>{{ _('¡No hay tiendas registradas!') }}</h3></p>
+                </div>
+            {% endif %}
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{ _('Información') }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{ msg }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _('Aceptar') }}</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

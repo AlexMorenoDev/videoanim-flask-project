@@ -1,0 +1,107 @@
+{% extends "/layouts/baseLogged.html" %}
+
+{% block content %}
+    <div class="container">
+        </br><h1>{{ _('Información de la tienda') }}</h1>
+        <div class="row">
+            <div class="col-sm my-auto">
+                <div class="container">
+                    <div class="modal fade bd-example-modal-lg show" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" id="dynamic-content">
+                                        <img src="{{ url_for('file', filename=tienda.nombre_imagen_tienda) }}" class="zoom" alt="Imagen no disponible">
+                                    </div>
+                                </div>
+                           </div>
+                    </div> 
+                    
+                    <a href="#myModal" role="button" data-toggle="modal">
+                        <img src="{{ url_for('file', filename=tienda.nombre_imagen_tienda) }}" class="zoom" alt="Imagen no disponible" >
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="container">
+                    <p>
+                        <form action="{{ url_for('modifyTienda', nombre_usuario=usuario.name, nombre_tienda=tienda.nombre) }}" enctype="multipart/form-data" method="POST">
+                            <div class="form-group">
+                                <label>{{ tienda.nombre }}</label>
+                                <input type="text" name="nombre_a" class="form-control" placeholder="{{ _('Introduce el nombre nuevo') }}" maxlength = "20">
+                            </div>
+                            <div class="form-group">
+                                <label>{{ tienda.direccion }}</label>
+                                <input type="text" name="direccion_a" class="form-control" placeholder="{{ _('Introduce la dirección nueva') }}" maxlength = "50">
+                            </div>
+                            <div class="form-group">
+                                <label>{{ tienda.telefono }}</label>
+                                <input type="tel" name="telefono_a" pattern="[0-9]{9}" class="form-control" placeholder="{{ _('Introduce el teléfono nuevo') }}">
+                            </div>
+                            <div class="form-group">
+                                <label>{{ _('Imagen') }}</label><br/>
+                                <input type="file" name="imagen_a" accept="image/*" class="form-control-file">
+                            </div>
+                            <button type="submit" class="btn btn-primary">{{ _('Modificar') }}</button>
+                        </form>
+                    </p>   
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            {% if tienda.productos|length > 0 %}
+                <h3>{{ _('Productos disponibles') }}:</h3>
+                <div class="row">
+                        {% for producto in tienda.productos %}
+                        <div class="col-lg-4 d-flex align-items-stretch">
+                            <div class="container">
+                                <p>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="{{ url_for('file', filename=producto.nombre_imagen_producto) }}" class="card-img-top" alt="Imagen no disponible">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><b>{{ producto.nombre }}</b></h5>
+                                            <p class="card-text">{{ producto.precio }} €</p>
+                                            <p class="card-text">{{ _('Tamaño') }}: {{ producto.tam_ancho }} x {{ producto.tam_alto }} cm</p>
+                                            <a href="{{ url_for('modifyProduct', nombre_usuario=usuario.name, nombre_tienda=tienda.nombre, nombre_producto=producto.nombre) }}" class="btn btn-primary">{{ _('Modificar') }}</a>
+                                            <a type="button" class="btn btn-primary" href="{{ url_for('removeProducto', nombre_tienda=tienda.nombre, nombre_producto=producto.nombre) }}">{{ _('Eliminar') }}</a>
+                                        </div>
+                                    </div>                                           
+                                </p>
+                            </div>            
+                        </div>
+                        {% endfor %}
+                </div>
+            {% else %}
+                <h3>{{ _('¡No hay productos registrados!') }}</h3>
+            {% endif %}
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{ _('Información') }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {% if error is defined %}
+                        {{ error }}
+                    {% else %} 
+                        {{ msg }}                               
+                    {% endif %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ _('Aceptar') }}</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

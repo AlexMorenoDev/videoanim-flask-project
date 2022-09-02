@@ -1,0 +1,319 @@
+# English translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-01-12 23:25+0100\n"
+"PO-Revision-Date: 2020-01-12 23:25+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: app.py:52
+msgid "¡Ya existe una cuenta con ese email!"
+msgstr "It already exists a user account with that email!"
+
+#: app.py:55
+msgid "¡Las contraseñas introducidas son distintas!"
+msgstr "Inserted passwords are different!"
+
+#: app.py:59 app.py:63
+msgid "¡Te has registrado correctamente!"
+msgstr "You have been successfully registered!"
+
+#: app.py:76
+msgid "¡Has iniciado sesión correctamente!"
+msgstr "You have successfully logged in!"
+
+#: app.py:78
+msgid "¡Email y/o contraseña incorrectos, inténtalo de nuevo!"
+msgstr "Incorrect email or password, try again!"
+
+#: app.py:80
+msgid "¡Introduce un email y contraseña válidos!"
+msgstr "Enter a valid email and password!"
+
+#: app.py:133
+msgid "Ya existe un usuario con ese email, prueba de nuevo."
+msgstr "It exists a user account with that email, try again."
+
+#: app.py:145
+msgid "La nueva password no puede ser igual que la actual. Prueba con otra."
+msgstr "New password cannot be the same as current one. Try again."
+
+#: app.py:165
+msgid "¡Tus datos se han guardado correctamente!"
+msgstr "Your personal information has been saved correctly!"
+
+#: app.py:167
+msgid "La contraseña introducida no es correcta, inténtalo de nuevo"
+msgstr "Incorrect password, try again"
+
+#: app.py:169
+msgid "Tienes que introducir tu contraseña actual para poder actualizar tus datos"
+msgstr "You must enter your current password to update your personal information"
+
+#: app.py:187
+msgid "¡Esa tienda ya existe!"
+msgstr "That shop already exists!"
+
+#: app.py:203 app.py:218 app.py:262 app.py:324 app.py:391
+msgid "¡El archivo introducido tiene que tener un formato jpg, jpeg o png!"
+msgstr "Uploaded file must have jpg, jpeg or png format!"
+
+#: app.py:220
+msgid "¡Tienda guardada correctamente!"
+msgstr "Shop successfully registered!"
+
+#: app.py:289
+msgid "¡Tienda actualizada correctamente!"
+msgstr "Shop successfully updated!"
+
+#: app.py:307
+msgid "¡Ese producto ya existe!"
+msgstr "That product already exists!"
+
+#: app.py:327
+msgid "¡Producto guardado correctamente!"
+msgstr "Product successfully registered!"
+
+#: app.py:421
+msgid "¡Producto actualizado correctamente!"
+msgstr "Product successfully updated!"
+
+#: templates/layouts/base.html:30 templates/layouts/baseLogged.html:29
+msgid "Idioma"
+msgstr "Language"
+
+#: templates/layouts/base.html:33 templates/layouts/baseLogged.html:32
+msgid "Español"
+msgstr "Spanish"
+
+#: templates/layouts/base.html:34 templates/layouts/baseLogged.html:33
+msgid "Euskera"
+msgstr "Vasque"
+
+#: templates/layouts/base.html:35 templates/layouts/baseLogged.html:34
+msgid "Inglés"
+msgstr "English"
+
+#: templates/layouts/base.html:44
+msgid "Registro"
+msgstr "Register"
+
+#: templates/layouts/base.html:45 templates/user/login.html:19
+msgid "Iniciar sesión"
+msgstr "Log In"
+
+#: templates/layouts/base.html:48 templates/layouts/base.html:50
+#: templates/layouts/baseLogged.html:41 templates/layouts/baseLogged.html:43
+#: templates/layouts/baseLogged.html:45 templates/layouts/baseLogged.html:48
+#: templates/layouts/baseLogged.html:50
+msgid "Volver"
+msgstr "Go back"
+
+#: templates/layouts/baseLogged.html:39
+msgid "Añadir tienda"
+msgstr "Add shop"
+
+#: templates/layouts/baseLogged.html:46
+msgid "Añadir productos"
+msgstr "Add products"
+
+#: templates/layouts/baseLogged.html:66 templates/layouts/baseLogged.html:68
+#: templates/user/profile.html:5
+msgid "Mi perfil"
+msgstr "My profile"
+
+#: templates/layouts/baseLogged.html:71
+msgid "Cerrar sesión"
+msgstr "Log out"
+
+#: templates/user/addProducts.html:11 templates/user/addTienda.html:11
+#: templates/user/register.html:15 templates/visitor/listProducts.html:33
+#: templates/visitor/showProduct.html:33
+msgid "Nombre"
+msgstr "Name"
+
+#: templates/user/addProducts.html:15 templates/visitor/showProduct.html:37
+msgid "Precio"
+msgstr "Price"
+
+#: templates/user/addProducts.html:19
+msgid "Ancho"
+msgstr "Width"
+
+#: templates/user/addProducts.html:21
+msgid "Alto"
+msgstr "Height"
+
+#: templates/user/addProducts.html:25 templates/visitor/showProduct.html:45
+msgid "Materiales"
+msgstr "Materials"
+
+#: templates/user/addProducts.html:29 templates/user/addTienda.html:23
+#: templates/user/modifyProduct.html:54 templates/user/modifyTienda.html:46
+msgid "Imagen"
+msgstr "Image"
+
+#: templates/user/addProducts.html:32 templates/user/addTienda.html:26
+msgid "Añadir"
+msgstr "Add"
+
+#: templates/user/addProducts.html:41 templates/user/addTienda.html:35
+#: templates/user/login.html:27 templates/user/modifyProduct.html:68
+#: templates/user/modifyTienda.html:86 templates/user/profile.html:36
+#: templates/user/register.html:34 templates/user/userTemplate.html:36
+msgid "Información"
+msgstr "Information"
+
+#: templates/user/addProducts.html:54 templates/user/addTienda.html:48
+#: templates/user/login.html:36 templates/user/modifyProduct.html:81
+#: templates/user/modifyTienda.html:99 templates/user/profile.html:50
+#: templates/user/register.html:47 templates/user/userTemplate.html:45
+msgid "Aceptar"
+msgstr "Accept"
+
+#: templates/user/addTienda.html:15 templates/visitor/listProducts.html:37
+msgid "Dirección"
+msgstr "Address"
+
+#: templates/user/addTienda.html:19 templates/visitor/listProducts.html:41
+msgid "Teléfono"
+msgstr "Phone number"
+
+#: templates/user/login.html:13 templates/user/register.html:12
+msgid "Introduce tu email"
+msgstr "Enter your email"
+
+#: templates/user/login.html:16 templates/user/register.html:19
+msgid "Contraseña"
+msgstr "Password"
+
+#: templates/user/login.html:17 templates/user/register.html:20
+msgid "Introduce tu contraseña"
+msgstr "Enter your password"
+
+#: templates/user/modifyProduct.html:5 templates/visitor/showProduct.html:5
+msgid "Información del producto"
+msgstr "Product information"
+
+#: templates/user/modifyProduct.html:35 templates/user/modifyTienda.html:35
+msgid "Introduce el nombre nuevo"
+msgstr "Enter new name"
+
+#: templates/user/modifyProduct.html:39
+msgid "Introduce el precio nuevo"
+msgstr "Enter new price"
+
+#: templates/user/modifyProduct.html:43
+msgid "Introduce el nuevo ancho"
+msgstr "Enter new width"
+
+#: templates/user/modifyProduct.html:47
+msgid "Introduce el nuevo alto"
+msgstr "Enter new height"
+
+#: templates/user/modifyProduct.html:51
+msgid "Introduce nuevos materiales"
+msgstr "Enter new materials"
+
+#: templates/user/modifyProduct.html:57 templates/user/modifyTienda.html:49
+#: templates/user/modifyTienda.html:69 templates/user/profile.html:25
+#: templates/user/userTemplate.html:18
+msgid "Modificar"
+msgstr "Update"
+
+#: templates/user/modifyTienda.html:5 templates/visitor/listProducts.html:5
+msgid "Información de la tienda"
+msgstr "Shop information"
+
+#: templates/user/modifyTienda.html:39
+msgid "Introduce la dirección nueva"
+msgstr "Enter new address"
+
+#: templates/user/modifyTienda.html:43
+msgid "Introduce el teléfono nuevo"
+msgstr "Enter new phone number"
+
+#: templates/user/modifyTienda.html:57 templates/visitor/listProducts.html:52
+msgid "Productos disponibles"
+msgstr "Available products"
+
+#: templates/user/modifyTienda.html:68 templates/visitor/showProduct.html:41
+msgid "Tamaño"
+msgstr "Size"
+
+#: templates/user/modifyTienda.html:70 templates/user/userTemplate.html:19
+msgid "Eliminar"
+msgstr "Delete"
+
+#: templates/user/modifyTienda.html:79
+msgid "¡No hay productos registrados!"
+msgstr "There is no product registered!"
+
+#: templates/user/profile.html:13
+msgid "Introduce el nuevo nombre"
+msgstr "Enter new name"
+
+#: templates/user/profile.html:17
+msgid "Introduce el nuevo email"
+msgstr "Enter new email"
+
+#: templates/user/profile.html:20
+msgid "Introduce la nueva contraseña"
+msgstr "Enter new password"
+
+#: templates/user/profile.html:23
+msgid "Introduce tu contraseña actual"
+msgstr "Enter your current password"
+
+#: templates/user/register.html:16
+msgid "Introduce tu nombre"
+msgstr "Enter your name"
+
+#: templates/user/register.html:23
+msgid "Repite la contraseña"
+msgstr "Repeat the password"
+
+#: templates/user/register.html:24
+msgid "Repite tu contraseña"
+msgstr "Repeat your password"
+
+#: templates/user/register.html:26
+msgid "Registrarse"
+msgstr "Register"
+
+#: templates/user/userTemplate.html:5
+msgid "Mi listado de tiendas"
+msgstr "My shop list"
+
+#: templates/user/userTemplate.html:28
+msgid "¡No hay tiendas registradas!"
+msgstr "There is no shop registered!"
+
+#: templates/visitor/index.html:16
+msgid "Visitar"
+msgstr "Visit"
+
+#: templates/visitor/listProducts.html:45
+msgid "Contacto"
+msgstr "Contact"
+
+#: templates/visitor/listProducts.html:65
+msgid "Examinar"
+msgstr "See"
+
+#: templates/visitor/listProducts.html:74
+msgid "¡No hay productos disponibles!"
+msgstr "There is no product available!"
+
