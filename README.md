@@ -4,7 +4,7 @@ Videoanim is a simple flask project developed for a university project using Pyt
 In the application, owners are allowed to create a user account and after logging in, they will be able to add, update and delete shop/s and products. Moreover, clients interested on this kind of establishments can visit each shop page to see its information and products.
 
 Application architecture:
-![alt text](https://github.com/AlexMoreno98/videoanim-flask-project/blob/master/images/diagram.PNG)
+![Image not found](https://github.com/AlexMorenoDev/videoanim-flask-project/blob/main/images/diagram.PNG)
 
 ## Installation
 
