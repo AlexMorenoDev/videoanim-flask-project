@@ -63,7 +63,7 @@ sudo apt-get -y install supervisor nginx git
 
 5. Clone github repository and install necessary python modules
 ``` bash
-git clone https://github.com/AlexMoreno98/videoanim-flask-project.git
+git clone https://github.com/AlexMorenoDev/videoanim-flask-project.git
 cd videoanim-flask-project
 ```
 After cloning the repository, inside "app" folder you have to uncomment line 36 (remote_ip = request.remote_addr) and comment line 38 (remote_ip = request.headers['X-Forwarded-For']) in visitor.py.
