@@ -151,7 +151,7 @@ The deployment can be done in a simple way:
 It´s important to create 2 files before deploying the application: requirements.txt and Procfile. 
 
 ## Linux deployment
-https://github.com/AlexMoreno98/videoanim-flask-project/blob/master/linux-deployment.md
+https://github.com/AlexMorenoDev/videoanim-flask-project/blob/main/linux-deployment.md
 
 ## i18n - Internationalization
 I have used Flask-Babel for this purpose. <br/>
